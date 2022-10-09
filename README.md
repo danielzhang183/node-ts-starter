@@ -1,12 +1,5 @@
 # node ts starter template
 
-[x] Typescript
-[x] Vitest
-[x] Pnpm + monorepo
-[x] Github action
-[x] Eslint
-[x] Commonjs + ESM bundler -- unbind
-
 ## Installation
 
 ```bash
@@ -17,4 +10,10 @@ pnpm i
 
 ```bash
 pnpm dev
+```
+
+## Publish
+
+```bash
+pnpm release
 ```
