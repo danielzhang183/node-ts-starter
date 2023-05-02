@@ -2,8 +2,8 @@
   "name": "pkg-name",
   "type": "module",
   "version": "0.0.0",
-  "packageManager": "pnpm@7.13.2",
-  "description": "",
+  "packageManager": "pnpm@8.3.1",
+  "description": "A node starter template with using ts",
   "author": "Daniel Zhang",
   "license": "MIT",
   "homepage": "https://github.com/danielzhang183/pkg-name#readme",
@@ -39,7 +39,7 @@
     "build": "unbuild",
     "dev": "unbuild --stub",
     "lint": "eslint .",
-    "prepublishOnly": "nr build",
+    "prepublishOnly": "npm run build",
     "release": "bumpp && npm publish",
     "start": "esno src/index.ts",
     "test": "vitest",
@@ -47,17 +47,18 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.27.0",
-    "@antfu/ni": "^0.18.0",
-    "@antfu/utils": "^0.5.2",
-    "@types/node": "^18.8.3",
+    "@types/node": "^18.16.3",
     "bumpp": "^8.2.1",
-    "eslint": "^8.25.0",
+    "eslint": "^8.39.0",
     "esno": "^0.16.3",
-    "pnpm": "^7.13.2",
+    "pnpm": "^8.3.1",
     "rimraf": "^3.0.2",
-    "typescript": "^4.8.4",
+    "typescript": "^4.9.5",
     "unbuild": "^0.8.11",
-    "vite": "^3.1.6",
+    "vite": "^3.2.6",
     "vitest": "^0.23.4"
+  },
+  "eslintConfig": {
+    "extends": "@antfu"
   }
 }

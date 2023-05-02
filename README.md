@@ -1,15 +1,17 @@
 # node ts starter template
 
+A node starter template with using typescript.
+
 ## Installation
 
 ```bash
 pnpm i
 ```
 
-## Run
+## Use as template
 
 ```bash
-pnpm dev
+degit danielzhang183/node-ts-starter .
 ```
 
 ## Publish
