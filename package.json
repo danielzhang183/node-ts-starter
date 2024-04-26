@@ -2,24 +2,23 @@
   "name": "pkg-name",
   "type": "module",
   "version": "0.0.0",
-  "packageManager": "pnpm@8.15.5",
+  "packageManager": "pnpm@9.0.6",
   "description": "A node starter template with using ts",
-  "author": "Daniel Zhang",
+  "author": "Daniel Zhang <danielzhang183@gmail.com>",
   "license": "MIT",
   "homepage": "https://github.com/danielzhang183/pkg-name#readme",
-  "repository": "danielzhang183/pkg-name",
-  "bugs": "https://github.com/danielzhang183/pkg-name/issues",
-  "keywords": [
-    "node",
-    "ts",
-    "node-ts-starter"
-  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/antfu/pkg-placeholder.git"
+  },
+  "bugs": "https://github.com/antfu/pkg-placeholder/issues",
+  "keywords": [],
   "sideEffects": false,
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs"
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
     }
   },
   "main": "./dist/index.mjs",
@@ -40,25 +39,26 @@
     "build": "unbuild",
     "dev": "unbuild --stub",
     "lint": "eslint .",
-    "prepublishOnly": "npm run build",
+    "prepublishOnly": "pnpm build",
     "release": "bumpp && npm publish",
     "start": "esno src/index.ts",
     "test": "vitest",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "prepare": "npx simple-git-hooks"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.27.0",
-    "@types/node": "^18.19.28",
+    "@antfu/eslint-config": "^2.16.0",
+    "@types/node": "^18.19.31",
     "bumpp": "^8.2.1",
-    "eslint": "^8.57.0",
+    "eslint": "^9.1.1",
     "esno": "^0.16.3",
     "lint-staged": "^15.2.2",
-    "pnpm": "^8.15.5",
     "rimraf": "^3.0.2",
     "simple-git-hooks": "^2.11.1",
+    "tsc": "^2.0.4",
     "typescript": "^4.9.5",
     "unbuild": "^0.8.11",
-    "vite": "^5.2.7",
+    "vite": "^5.2.10",
     "vitest": "^0.23.4"
   },
   "simple-git-hooks": {
@@ -66,8 +66,5 @@
   },
   "lint-staged": {
     "*": "eslint --fix"
-  },
-  "eslintConfig": {
-    "extends": "@antfu"
   }
 }
